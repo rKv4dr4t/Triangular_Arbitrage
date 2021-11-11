@@ -31,7 +31,7 @@ Asset's price changes faster than the update timing of scanner, so there are con
 Another problem is about stepSize. Different decimal approximations make difficult calculate the same price in three different assets which probably don't share same approximation. A proximated solution is to avoid orders which can't confirm profitable conditions.
 
 
-An important improvement could be consider not just one crypto as starting asset, but consider every asset. To achieve this goal is necessary take two more steps: the first one is convert a starting crypto to connect with the three main steps. The last one is take back the starting crypto
+An important improvement could be consider not just one crypto as starting asset, but consider every possible asset. To achieve this goal is necessary take two more steps: the first one is convert a starting crypto to connect with the three main steps. The last one is take back the starting crypto
 
 ## Credits
 Scanner component is based on [BinanceTriangularArbitrage_v2](https://github.com/karthik947/BinanceTriangularArbitrage_v2) 
