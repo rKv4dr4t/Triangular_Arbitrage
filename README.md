@@ -6,7 +6,6 @@ At the moment this project is just a study and actually is partially profitable.
 ## Setup
 - Install [Node.js](https://nodejs.org/en/)
 - Install [Flask](https://flask.palletsprojects.com/en/2.0.x/)
-- Download and unzip this package
 - Generate API keys in Binance and put them in `sendOrders > config.py`
 - Change starting crypto and starting amount in `sendOrders > app.py` (r. 56-58)
 - Go to the current folder and run both projects:
