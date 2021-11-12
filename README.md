@@ -25,7 +25,7 @@ python app.py
 
 ## Limitations and future improvements
 One of the main issue about Triangular Arbitrage is execution speed. Connection between Node.js and Flask should be avoided to increase speed. 
-Asset's price changes faster than the update timing of scanner, so there are conversion problems between assets. Just if the real price remains same as which calculated, script is able to complete every orders and is also profitable. 
+Asset's price changes faster than the update timing of scanner, so there are conversion problems between assets. Just if the real price remains same as calculated, script is able to complete every order and is also profitable. 
 
 
 Another problem is about stepSize. Different decimal approximations make difficult calculate the same price in three different assets which probably don't share same approximation. A proximated solution is to avoid orders which can't confirm profitable conditions.
