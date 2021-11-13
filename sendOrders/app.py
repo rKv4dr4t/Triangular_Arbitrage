@@ -6,6 +6,7 @@ from binance.enums import *
 from flask_socketio import SocketIO
 import math
 from datetime import datetime
+import requests
 
 import websocket, json
 
@@ -23,6 +24,7 @@ def shutdown():
     if shutdown_func is None:
         raise RuntimeError('Not running werkzeug')
     shutdown_func()
+    #return requests.get('http://127.0.0.1:80').content
     return "Shutting down..."
 
 
@@ -362,7 +364,7 @@ def postJsonHandler():
                             print("\n" + str(first_symbol) + ": " + str(first_qty) + " - " + str(second_symbol) + ": " + str(second_qty) + " - " + str(third_symbol) + ": " + str(third_qty))
                             
                             print("ORDERS DONE" + "\n")
-                            print("1 a 2: " + str(st_to_nd_final) + " - " + str(nd_from_st_final) + " -- 2 a 3: " + str(nd_to_rd_final) + " - " + str(rd_from_nd_final) + " -- 3 a 1: " + str(st_to_rd_final) + " - " + str(rd_from_st_final))
+                            #print("1 a 2: " + str(st_to_nd_final) + " - " + str(nd_from_st_final) + " -- 2 a 3: " + str(nd_to_rd_final) + " - " + str(rd_from_nd_final) + " -- 3 a 1: " + str(st_to_rd_final) + " - " + str(rd_from_st_final))
 
                             # Shutdown server
                             return redirect('/shutdown')
@@ -371,7 +373,7 @@ def postJsonHandler():
                             flash(erro.message, "erro")
                             print("\n" + str(first_symbol) + ": " + str(first_qty) + " - " + str(second_symbol) + ": " + str(second_qty) + " - " + str(third_symbol) + ": " + str(third_qty))
                             print("ERROR 3: " + erro.message + "\n") 
-                            print("1 a 2: " + str(st_to_nd_final) + " - " + str(nd_from_st_final) + " -- 2 a 3: " + str(nd_to_rd_final) + " - " + str(rd_from_nd_final) + " -- 3 a 1: " + str(st_to_rd_final) + " - " + str(rd_from_st_final))
+                            #print("1 a 2: " + str(st_to_nd_final) + " - " + str(nd_from_st_final) + " -- 2 a 3: " + str(nd_to_rd_final) + " - " + str(rd_from_nd_final) + " -- 3 a 1: " + str(st_to_rd_final) + " - " + str(rd_from_st_final))
 
                             # Shutdown server
                             return redirect('/shutdown')   
@@ -380,7 +382,7 @@ def postJsonHandler():
                         flash(err.message, "err")
                         print("\n" +  str(first_symbol) + ": " + str(first_qty) + " - " + str(second_symbol) + ": " + str(second_qty) + " - " + str(third_symbol) + ": " + str(third_qty))
                         print("ERROR 2: " + err.message + "\n")
-                        print("1 a 2: " + str(st_to_nd_final) + " - " + str(nd_from_st_final) + " -- 2 a 3: " + str(nd_to_rd_final) + " - " + str(rd_from_nd_final) + " -- 3 a 1: " + str(st_to_rd_final) + " - " + str(rd_from_st_final))
+                        #print("1 a 2: " + str(st_to_nd_final) + " - " + str(nd_from_st_final) + " -- 2 a 3: " + str(nd_to_rd_final) + " - " + str(rd_from_nd_final) + " -- 3 a 1: " + str(st_to_rd_final) + " - " + str(rd_from_st_final))
 
                         # Shutdown server
                         return redirect('/shutdown')
@@ -389,7 +391,7 @@ def postJsonHandler():
                     flash(er.message, "er")
                     print("\n" + str(first_symbol) + ": " + str(first_qty) + " - " + str(second_symbol) + ": " + str(second_qty) + " - " + str(third_symbol) + ": " + str(third_qty))
                     print("ERROR 1: " + er.message + "\n")
-                    print("1 a 2: " + str(st_to_nd_final) + " - " + str(nd_from_st_final) + " -- 2 a 3: " + str(nd_to_rd_final) + " - " + str(rd_from_nd_final) + " -- 3 a 1: " + str(st_to_rd_final) + " - " + str(rd_from_st_final))
+                    #print("1 a 2: " + str(st_to_nd_final) + " - " + str(nd_from_st_final) + " -- 2 a 3: " + str(nd_to_rd_final) + " - " + str(rd_from_nd_final) + " -- 3 a 1: " + str(st_to_rd_final) + " - " + str(rd_from_st_final))
                     
                     # Shutdown server
                     return redirect('/shutdown')
